@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="showRandomNumber" class="form-control" type="text">
+                    <button id="randomNumberBtn"  class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input id="numberPad" class="form-control" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                              <div id ="seven-btn" class="button" onclick="getInput('seven-btn')">7</div>
+                              <div id ="eight-btn" class="button" onclick="getInput('eight-btn')">8</div>
+                              <div id ="nine-btn" class="button" onclick="getInput('nine-btn')">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div id ="four-btn" class="button" onclick="getInput('four-btn')">4</div>
+                              <div id ="five-btn" class="button" onclick="getInput('five-btn')">5</div>
+                              <div id ="six-btn"  class="button" onclick="getInput('six-btn')">6</div>
+                            </div>
+                             <div class="calc-button-row">
+                              <div id ="one-btn" class="button" onclick="getInput('one-btn')">1</div>
+                              <div id ="two-btn" class="button" onclick="getInput('two-btn')">2</div>
+                              <div id ="three-btn" class="button" onclick="getInput('three-btn')">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div id ="erase-btn"  class="button" onclick="eraseLastDigit('numberPad')"> < </div>
+                                <div id ="zero-btn"  class="button" onclick="getInput('zero-btn')">0</div>
+                                <div id ="allClear-btn" class="button" onclick="allClearBtn('allClear-btn')">C</div>
+                            </div>
+                            <div>
+                                <button id="submitBtn" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left"> <span id="tryValue">3</span> try left</p>
+                            </div> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notify-section">
+            <p id ="bottom-text-for-failed" class="notify">❌ Pin Didn't Match, Please try again</p>
+            <p id ="bottom-text-for-match" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
