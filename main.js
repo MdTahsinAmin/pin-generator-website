@@ -73,13 +73,24 @@ function matchAndDisplay(firstId,secondId){
     var textNumber = document.getElementById(secondId).value;
 
     if(randomNumber == textNumber){
+       trueOrFalse(true);
+    }
+    else{
+      trueOrFalse(false);  
+    }
+}
+
+function trueOrFalse(isTrue){
+    if(isTrue == true){
         document.getElementById('bottom-text-for-match').style.display = 'block';
+
         document.getElementById('bottom-text-for-failed').style.display = "none";
     }
     else{
+        
         document.getElementById('bottom-text-for-failed').style.display = "block";
+
         document.getElementById('bottom-text-for-match').style.display = 'none';
-       
        
         var spanTagsValue = getElementByTags('tryValue');
 
@@ -99,6 +110,7 @@ function matchAndDisplay(firstId,secondId){
        
     }
 }
+// submit btn work finish 
 
 // all clear Btn 
 
@@ -109,13 +121,11 @@ function allClearBtn(id){
     document.getElementById('numberPad').value = presentNumberPadValue;
 }
 
-
 // Erase last digit btn
 
 function eraseLastDigit(id){
 
     var NumberPadValue = document.getElementById(id).value;
-
 
     if(NumberPadValue.length > 0){
         NumberPadValue = NumberPadValue.substring(0,NumberPadValue.length-1);
@@ -123,12 +133,6 @@ function eraseLastDigit(id){
 
     document.getElementById(id).value = NumberPadValue;
 }
-
-
-
-
-
-
 
 
 // show random Number 
