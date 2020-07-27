@@ -98,7 +98,7 @@ function trueOrFalse(isTrue){
 
        if(spanTagsValue == 1 ){
            spanTagsValue -=1;
-           document.getElementById('submitBtn').disable = true;
+           document.getElementById('submitBtn').disabled = true;
            document.getElementById('submitBtn').style.backgroundColor = "red"
        }
 
@@ -107,7 +107,7 @@ function trueOrFalse(isTrue){
        }
       
        document.getElementById('tryValue').innerText = spanTagsValue;
-       
+      
     }
 }
 // submit btn work finish 
